@@ -1,8 +1,5 @@
 # Laravel 8 - Ecommerce application
 
-## Screenshots
-
-![preview img](/preview.png)
 
 ## Run Locally
 
