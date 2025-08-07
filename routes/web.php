@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ContactController;
+
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -33,6 +35,9 @@ Route::get('product/{slug}', [\App\Http\Controllers\ProductController::class, 's
 
 Route::resource('favorite', \App\Http\Controllers\FavoriteController::class)->only(['index','store','destroy']);
 Route::resource('cart', \App\Http\Controllers\CartController::class)->only(['index','store','update', 'destroy']);
+
+Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
+Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 
 Route::group(['middleware' => 'auth'], function() {
 

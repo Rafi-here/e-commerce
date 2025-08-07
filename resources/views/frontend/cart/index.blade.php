@@ -16,7 +16,7 @@
                         </div>
                     @endif
 
-					<h1 class="cart-heading text-center">Cart Page</h1>
+				<h1 class="cart-heading text-center font-weight-bolder">Cart</h1>
 						<div class="table-content table-responsive">
 							<table>
 								<thead>
